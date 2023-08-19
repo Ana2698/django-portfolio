@@ -1,0 +1,343 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projects</title>
+  <link rel="stylesheet" href="{% static 'home/projects.css' %}">
+  <link rel="stylesheet" href="{% static 'home/footer.css' %}">
+  <link rel="stylesheet" href="{% static 'home/navbar.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    .html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #c4d6e2 !important;
+      min-height: 1000px;
+    }
+
+    .project-space {
+      padding-top: 70px;
+      min-height: 1000px;
+    }
+
+    .projects-header {
+      padding-top: 50px;
+      background-color: lightslategray;
+    }
+
+    .projects-header h1 {
+      text-align: center;
+    }
+
+    .container {
+      width: 100% !important;
+      padding-bottom: 60px;
+      padding-top: 90px;
+      padding-right: 15px !important;
+      padding-left: 15px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .img {
+      object-fit: fit;
+      object-position: center center;
+    }
+
+    .github-photo {
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project-logos {
+      display: flex;
+      justify-content: center;
+    }
+
+    .project-logos .gene {
+      padding: 20px;
+    }
+
+    .project-logos .fake {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #99b8cd;
+    }
+
+    .footercontainer {
+      width: 100%;
+      padding: 70px 30px 20px;
+    }
+
+    .socialIcons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .socialIcons a {
+      text-decoration: none;
+      padding: 10px;
+      background-color: #99b8cd;
+      margin: 10px;
+      border-radius: 50%;
+    }
+
+    .socialIcons a i {
+      font-size: 2em;
+      color: #333;
+      opacity: 0.9;
+    }
+
+    .socialIcons a:hover {
+      background-color: #333;
+      transition: 0.5ms;
+    }
+
+    .socialIcons a:hover i {
+      color: #a7c7e7;
+      transition: 0.5ms;
+    }
+
+    .footernav {
+      margin: 30px 0;
+    }
+
+    .footernav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footernav li {
+      list-style: none;
+    }
+
+    .footernav ul li a {
+      color: #333;
+      margin: 20px;
+      text-decoration: none;
+      font-size: 1.3em;
+      opacity: 0.7;
+      transition: 0.5ms;
+    }
+
+    .footernav ul li a:hover {
+      opacity: 1;
+    }
+
+    .navbar {
+      background-color: whitesmoke;
+    }
+
+    body {
+      padding-top: 56px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <a style="font-family: Brush Script MT, brush, cursive; font-size: 30px;" class="navbar-brand"
+          href="/">Anamika's
+          Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="projects-header">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="project_head-content col-lg-12">
+          <h1>Preview of Projects</h1>
+        </div>
+        <div class="project-logos">
+          <a class="fake" href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Fake%20News%20Detector"
+            target="_blank">
+            <img style="width: 50px; height: 50px;" class="github-photo" src="{% static 'img/fake.png' %}">
+          </a>
+          <a class="fake"
+            href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Covid-19%20Infection%20Predictor"
+            target="_blank">
+            <img style="width: 50px; height: 50px;" class="github-photo" src="{% static 'img/covid.png' %}">
+          </a>
+          <a class="fake"
+            href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Handwritten%20Number%20Recognition"
+            target="_blank">
+            <img style="width: 50px; height: 50px;" class="github-photo" src="{% static 'img/numbers.png' %}">
+          </a>
+          <a class="gene"
+            href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Data%20Engineering%20of%20High%20Volume%20Gene%20Data"
+            target="_blank">
+            <img style="width: 50px; height: 50px;" class="github-photo" src="{% static 'img/genetic.png' %}">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="project-space">
+    <div class="container">
+      <div class="col-lg-10 col-md-10 col-sm-10 mx-auto">
+        <div class="row porject-preview">
+          <div class="col-lg-3 col-md-3 d-flex justify-content-center img-fluid align-self-center">
+            <a href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Fake%20News%20Detector"
+              target="_blank">
+              <img class="github-photo" src="{% static 'img/github-logo.png' %}">
+            </a>
+          </div>
+          <div class="col-lg-9 col-md-9 col-xs-9">
+            <a style="text-decoration: none; color: black;"
+              href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Fake%20News%20Detector"
+              target="_blank">
+              <h2 class="project-title"> Fake News Detector</h2>
+            </a>
+            <p>
+              Performed the task of classifying news as fake or real news using the ISOT(Information Security and Object
+              Technology Lab) Fake
+              news dataset found on <a style="text-decoration: none;"
+                href="https://www.kaggle.com/datasets/csmalarkodi/isot-fake-news-dataset">Kaggle</a>. NLP
+              techniques(Tokenization, Vectorization, Word embedding etc.) used for text preprocessing
+              and feature extraction. Classifier models (Linear SVC, Linear Regression and MultinomialNB) and Neural
+              Network models(Basic LSTM, LSTM with GLoVe embeddings and Bidirectional LSTM) were trained, tested and
+              validated.Validation techniques such as K-Fold validation and custom dataset used to
+              validate the models. Performance of all the models were compared based on the testing and validtaion
+              results. The results can be viewed on GitHub.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="row porject-preview">
+          <div class="col-lg-3 col-md-3 d-flex justify-content-center img-fluid align-self-center">
+            <a href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Fake%20News%20Detector"
+              target="_blank">
+              <img class="github-photo" src="{% static 'img/github-logo.png' %}">
+            </a>
+          </div>
+          <div class="col-lg-9 col-md-9 col-xs-9">
+            <a style="text-decoration: none; color: black;"
+              href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Covid-19%20Infection%20Predictor"
+              target="_blank">
+              <h2 class="project-title"> COVID-19 Infection Predictor</h2>
+            </a>
+            <p>
+              This projects is the implementation of mainly two tasks. One task is to predict whether an individual is
+              infected with Covid-19 virus
+              and the other is to predict the severity of the infection based on given symptoms. To accomplish both the
+              tasks a Decision Tree classifier model is trained and its parameter values are decided by applying
+              hyperparameter tuning. The dataset used to train the models for the two tasks is generated based on the
+              WHO guidelines and Ministry of Health and Family Welfare, India and can be found on <a
+                style="text-decoration: none;"
+                href="https://www.kaggle.com/datasets/iamhungundji/covid19-symptoms-checker">Kaggle</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="row porject-preview">
+          <div class="col-lg-3 col-md-3 d-flex justify-content-center img-fluid align-self-center">
+            <a href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Fake%20News%20Detector"
+              target="_blank">
+              <img class="github-photo" src="{% static 'img/github-logo.png' %}">
+            </a>
+          </div>
+          <div class="col-lg-9 col-md-9 col-xs-9">
+            <a style="text-decoration: none; color: black;"
+              href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Covid-19%20Infection%20Predictor"
+              target="_blank">
+              <h2 class="project-title"> Handwritten Number Recognition</h2>
+            </a>
+            <p>
+              Implemented the task of classifying of handwritten digits. Several classifier (K-Nearest Neighbor, Random
+              Forest, Support Vector Machine) and neural networks(Convolution Neural Network) models
+              were trained on the MNIST dataset which is a widley used dataset of handwritten digits. The model
+              performances are test and validated using K-Fold validation.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="row porject-preview">
+          <div class="col-lg-3 col-md-3 d-flex justify-content-center img-fluid align-self-center">
+            <a href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Data%20Engineering%20of%20High%20Volume%20Gene%20Data"
+              target="_blank">
+              <img class="github-photo" src="{% static 'img/github-logo.png' %}">
+            </a>
+          </div>
+          <div class="col-lg-9 col-md-9 col-xs-9">
+            <a style="text-decoration: none; color: black;"
+              href="https://github.com/Ana2698/DataMiningMachineLearning/tree/master/Data%20Engineering%20of%20High%20Volume%20Gene%20Data"
+              target="_blank">
+              <h2 class="project-title"> Data Engineering and Machine learning on high-volume gene data</h2>
+            </a>
+            <p>
+              Built clustering model for high volume RNA-sequence data. Performed data pre-processing by using
+              techniques like dimensionality reduction through tools like PCA and FastICA. Trained a K-Means model with
+              the number of clusters as 16, to get achieve an accuracy of 0.86
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footercontainer">
+      <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footernav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  {% block body %}
+  {% endblock %}
+</body>
+
+</html>
