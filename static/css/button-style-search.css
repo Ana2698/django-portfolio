@@ -1,0 +1,9 @@
+.btn1 {
+    color: #8490ff;
+    border: 1px solid #8490ff;
+    background: #fff;
+  }
+
+  .btn1.circle {
+    border-radius: 40px
+  }

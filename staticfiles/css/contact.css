@@ -1,0 +1,29 @@
+.html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #c4d6e2!important;
+    min-height: 600px;
+}
+.contact-space{
+    padding-top: 70px;
+    min-height: 600px;
+}
+.email-button{
+  background-color:#99b8cd!important;
+  padding: 15px 15px;
+  color:#333;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border:none;
+  border-radius: 15px;
+}
+.email-button:hover{
+  background-color: #333!important;
+  color: white!important;
+  transition: 0.5ms;
+}
+.send-email{
+    padding-top: 20px;
+}

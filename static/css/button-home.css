@@ -1,0 +1,15 @@
+.resume_button {
+  background-color:#99b8cd!important;
+  font-family:Sans MS, comic, cursive;;
+  padding: 15px 32px;
+  color:#333;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+}
+.resume_button:hover{
+  background-color: #333!important;
+  color: white!important;
+  transition: 0.5ms;
+}

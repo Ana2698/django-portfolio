@@ -1,0 +1,49 @@
+
+.html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #c4d6e2!important;
+    min-height: 1000px;
+}
+.project-space{
+    padding-top: 70px;
+    min-height: 1000px;
+}
+.projects-header{
+    padding-top: 50px;
+    background-color: lightslategray;
+}
+.projects-header h1{
+    text-align: center;
+}
+.container{
+    width: 100%!important;
+    padding-bottom: 60px;
+    padding-top: 90px;
+    padding-right: 15px!important;
+    padding-left: 15px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+.img{
+    object-fit: fit;
+    object-position: center center;
+}
+.github-photo{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.project-logos{
+    display: flex;
+    justify-content: center;
+}
+.project-logos .gene{
+    padding: 20px;
+}
+.project-logos .fake{
+    padding: 20px;
+}

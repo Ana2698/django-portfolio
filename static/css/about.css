@@ -1,0 +1,245 @@
+#about-row::after {
+    box-sizing: border-box;
+}
+
+#about-row::before {
+    box-sizing: border-box;
+}
+.html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #c4d6e2!important;
+}
+.about_section{
+    padding-top: 60px;
+}
+.about-header h1{
+    text-align: center;
+}
+#about-row{
+    padding-top:-40px;
+    padding-left: 20px;
+    padding-right: 0;
+    border-radius: 12px;
+    width: 1100px;
+}
+.about-header{
+    padding-top: 50px;
+    background-color: lightslategray;
+}
+.about-logos{
+    display: flex;
+    justify-content: center;
+}
+.about-logos .gene{
+    padding: 20px;
+}
+.about-logos .fake{
+    padding: 20px;
+}
+.hr{
+    width: 690px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.timeline-header{
+    padding-bottom: 20px;
+}
+.timeline-header .timeline-h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.container {
+    padding-top: 90px;
+    padding-right: 0;
+    padding-bottom: 60px;
+}
+.wrapper{
+    background:#c4d6e2;
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+    animation-name: movedown;
+    animation-duration: 1s;
+    animation-direction: linear forwards;
+    padding-bottom: 50px!important;   
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+.wrapper:nth-child(1){
+    animation-delay: 0s;
+}
+.wrapper:nth-child(2){
+    animation-delay: 1s;
+}
+.wrapper:nth-child(3){
+    animation-delay: 2s;
+}
+.wrapper:nth-child(3){
+    animation-delay: 3s;
+}
+.wrapper .center-line{
+    position: absolute;
+    height: 680px;
+    width: 6px;
+    border: solid lightslategray;
+    border-radius: 6px;
+    background:transparent;
+    left: 50%;
+    animation-name: moveline;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-direction: linear forwards;
+    transform: translateX(-50%);
+}
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.wrapper.row{
+    display: flex;
+    justify-content: flex-start;
+}
+.wrapper .row-2{
+    justify-content: flex-start;
+}
+.wrapper .row-3{
+    justify-content: flex-end;
+}
+.wrapper .row-4{
+    justify-content: flex-start;
+}
+.wrapper .row-5{
+    justify-content: flex-end;
+}
+.wrapper .row .timeline-left{
+    border:solid lightslategray;
+    background: #c4d6e2;
+    border-radius: 12px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+}
+.wrapper .row .timeline-right{
+    border:solid lightslategray;
+    background: #c4d6e2;
+    border-radius: 12px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+}
+
+.row-2 section::before{
+    right: -7px;
+}
+.row-3 section::before{
+    left: -7px;
+}
+.row-4 section::before{
+    right: -7px;
+}
+.row-5 section::before{
+    left: -7px;
+}
+.row section .icons{
+    position: absolute;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: lightslategray;
+}
+.center-line .scroll-icon{
+    position: absolute;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+}
+.row-2 section .icons{
+    top: 13px;
+    right: -62px;
+}
+.row-3 section .icons{
+    top: 13px;
+    left: -62px;
+}
+.row-4 section .icons{
+    top: 13px;
+    right: -62px;
+}
+.row-5 section .icons{
+    top: 13px;
+    left: -62px;
+}
+.row section .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row section .details .title{
+    font-size: 22px;
+    font-weight: 600;
+}
+.row section p{
+    margin: 10px 0 17px 0;
+
+}
+@media(max-width: 790px){
+    .wrapper .center-line{
+        left: 42px;
+    }
+    .wrapper .row{
+        margin: 30px 0 3px 60px;
+    }
+    .wrapper .row section{
+       width: 100%!important; 
+    }
+    .row section::before{
+        left: -7px;
+    }
+    .row section .icons{
+        left: -60px;
+    }
+}
+@media(max-width: 440px){
+    .wrapper .center-line,
+    .row section::before,
+    .row section .icons{
+        display: none;
+    }
+    .wrapper .row{
+        margin: 10px 0;
+    }
+}
+@media only screen and (max-width: 790px){
+    .container{
+        padding-right: 20px!important;
+    }
+    #about-row{
+        width: 120%!important;
+    }
+
+}

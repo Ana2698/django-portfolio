@@ -6,321 +6,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>about</title>
-  <link rel="stylesheet" href="{% static 'home/footer.css' %}">
-  <link rel="stylesheet" href="{% static 'home/about.css' %}">
-  <link rel="stylesheet" href="{% static 'home/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css\footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css\about.css' %}">
+  <link rel="stylesheet" href="{% static 'css\navbar.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <style>
-    #about-row::after {
-    box-sizing: border-box;
-    }
-
-    #about-row::before {
-        box-sizing: border-box;
-    }
-    .html{
-        scroll-behavior: smooth;
-    }
-    body{
-        background-color: #c4d6e2!important;
-    }
-    .about_section{
-        padding-top: 60px;
-    }
-    .about-header h1{
-        text-align: center;
-    }
-    #about-row{
-        padding-top:-40px;
-        padding-left: 20px;
-        padding-right: 0;
-        border-radius: 12px;
-        width: 1100px;
-    }
-    .about-header{
-        padding-top: 50px;
-        background-color: lightslategray;
-    }
-    .about-logos{
-        display: flex;
-        justify-content: center;
-    }
-    .about-logos .gene{
-        padding: 20px;
-    }
-    .about-logos .fake{
-        padding: 20px;
-    }
-    .hr{
-        width: 690px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    .timeline-header{
-        padding-bottom: 20px;
-    }
-    .timeline-header .timeline-h2{
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    .container {
-        padding-top: 90px;
-        padding-right: 0;
-        padding-bottom: 60px;
-    }
-    .wrapper{
-        background:#c4d6e2;
-        max-width: 1080px;
-        margin: 50px auto;
-        padding: 0 20px;
-        position: relative;
-        animation-name: movedown;
-        animation-duration: 1s;
-        animation-direction: linear forwards;
-        padding-bottom: 50px!important;   
-    }
-    @keyframes movedown{
-        0%{
-            opacity: 1;
-            transform: translateY(-30px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0px);
-        }
-
-    }
-    .wrapper:nth-child(1){
-        animation-delay: 0s;
-    }
-    .wrapper:nth-child(2){
-        animation-delay: 1s;
-    }
-    .wrapper:nth-child(3){
-        animation-delay: 2s;
-    }
-    .wrapper:nth-child(3){
-        animation-delay: 3s;
-    }
-    .wrapper .center-line{
-        position: absolute;
-        height: 680px;
-        width: 6px;
-        border: solid lightslategray;
-        border-radius: 6px;
-        background:transparent;
-        left: 50%;
-        animation-name: moveline;
-        animation-delay: calc(var(--scroll) * -1s);
-        animation-direction: linear forwards;
-        transform: translateX(-50%);
-    }
-    @keyframes moveline {
-        0%{
-            height: 0;
-        }
-        100%{
-            height: 100%;
-        }
-    }
-    .wrapper.row{
-        display: flex;
-        justify-content: flex-start;
-    }
-    .wrapper .row-2{
-        justify-content: flex-start;
-    }
-    .wrapper .row-3{
-        justify-content: flex-end;
-    }
-    .wrapper .row-4{
-        justify-content: flex-start;
-    }
-    .wrapper .row-5{
-        justify-content: flex-end;
-    }
-    .wrapper .row .timeline-left{
-        border:solid lightslategray;
-        background: #c4d6e2;
-        border-radius: 12px;
-        width: calc(50% - 40px);
-        padding: 20px;
-        position: relative;
-    }
-    .wrapper .row .timeline-right{
-        border:solid lightslategray;
-        background: #c4d6e2;
-        border-radius: 12px;
-        width: calc(50% - 40px);
-        padding: 20px;
-        position: relative;
-    }
-
-    .row-2 section::before{
-        right: -7px;
-    }
-    .row-3 section::before{
-        left: -7px;
-    }
-    .row-4 section::before{
-        right: -7px;
-    }
-    .row-5 section::before{
-        left: -7px;
-    }
-    .row section .icons{
-        position: absolute;
-        background: transparent;
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        color: lightslategray;
-    }
-    .center-line .scroll-icon{
-        position: absolute;
-        background: transparent;
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        color: black;
-    }
-    .row-2 section .icons{
-        top: 13px;
-        right: -62px;
-    }
-    .row-3 section .icons{
-        top: 13px;
-        left: -62px;
-    }
-    .row-4 section .icons{
-        top: 13px;
-        right: -62px;
-    }
-    .row-5 section .icons{
-        top: 13px;
-        left: -62px;
-    }
-    .row section .details{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .row section .details .title{
-        font-size: 22px;
-        font-weight: 600;
-    }
-    .row section p{
-        margin: 10px 0 17px 0;
-
-    }
-    @media(max-width: 790px){
-        .wrapper .center-line{
-            left: 42px;
-        }
-        .wrapper .row{
-            margin: 30px 0 3px 60px;
-        }
-        .wrapper .row section{
-          width: 100%!important; 
-        }
-        .row section::before{
-            left: -7px;
-        }
-        .row section .icons{
-            left: -60px;
-        }
-    }
-    @media(max-width: 440px){
-        .wrapper .center-line,
-        .row section::before,
-        .row section .icons{
-            display: none;
-        }
-        .wrapper .row{
-            margin: 10px 0;
-        }
-    }
-    @media only screen and (max-width: 790px){
-        .container{
-            padding-right: 20px!important;
-        }
-        #about-row{
-            width: 120%!important;
-        }
-
-    }
-    footer{
-    background-color: #99b8cd;
-    }
-    .footercontainer{
-        width: 100%;
-        padding: 70px 30px 20px;
-    }
-    .socialIcons{
-      display: flex;
-      justify-content: center; 
-    }
-    .socialIcons a{
-        text-decoration: none;
-        padding: 10px;
-        background-color: #99b8cd;
-        margin: 10px;
-        border-radius: 50%;
-    }
-    .socialIcons a i{
-        font-size: 2em;
-        color: #333;
-        opacity: 0.9;
-    }
-    .socialIcons a:hover{
-        background-color: #333;
-        transition: 0.5ms;
-    }
-    .socialIcons a:hover i{
-        color:#a7c7e7;
-        transition: 0.5ms;
-    }
-    .footernav{
-        margin: 30px 0;
-    }
-    .footernav ul{
-        display: flex;
-        justify-content: center;
-    }
-    .footernav li{
-        list-style: none;
-    }
-    .footernav ul li a{
-        color: #333;
-        margin: 20px;
-        text-decoration: none;
-        font-size: 1.3em;
-        opacity: 0.7;
-        transition: 0.5ms;
-    }
-    .footernav ul li a:hover{
-        opacity: 1;
-    }
-    .navbar{
-    background-color: whitesmoke;
-    }
-    body{
-        padding-top: 56px;
-    }
-  </style>
 </head>
-
 <body>
   <header>
     <nav class="navbar fixed-top navbar-expand-lg">
@@ -360,10 +54,10 @@
         </div>
         <div class="about-logos">
           <a class="fake" href="#about-content">
-              <img style="width: 50px; height: 50px;"class="github-photo" src="static\woman.png">
+              <img style="width: 50px; height: 50px;"class="github-photo" src="{% static 'img\woman.png' %}">
           </a>
           <a class="fake" href="#t-h">
-              <img style="width: 50px; height: 50px;"class="github-photo" src="static\edu.png">
+              <img style="width: 50px; height: 50px;"class="github-photo" src="{% static 'img\edu.png'%}">
           </a>
         </div>
       </div>
@@ -405,7 +99,7 @@
           </div>
 
         </div>
-        <IMG SRC="static\aboutme.png"
+        <IMG SRC="{% static 'img\aboutme.png' %}"
           style=" padding-left:10px;padding-right: 40px; padding-top:80px;width: 320px;height:360px;max-width:100%;">
       </div>
     </div>
